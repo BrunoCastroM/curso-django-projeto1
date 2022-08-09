@@ -1,14 +1,11 @@
 {% include 'recipes/partials/head.html' %}  {% comment %} o include é do django serve para colocar if, for entre outras funcionalidades. Nesse caso eu coloquei o caminho do "head.html" para juntar o código {% endcomment %}
 <body>
     {% include 'recipes/partials/header.html' %}
+    {% include 'recipes/partials/search.html' %}
 
-    <div class="search-container">
-        <div class="container" >
-            <form action="" class="search-form" >
-                <input type="search" class="search-input" name="search">
-                <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-    </div>
+    <main class="main-content-container">
+        <div class="main-content main-content-list container"></div>
+    </main>
+    
 </body>
 </html>
