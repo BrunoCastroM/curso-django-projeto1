@@ -117,7 +117,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'static/'  # Aqui é nome do caminho que você colocará para servir de referência na hora de colocar a função do django "load", porém isso só serve para pastas dentro do do app que você criou
+
+# Se você quiser fazer referência a uma pasta que está na pasta raiz do projeto você deve fazer o comando:
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'nome da pasta',
+]
+# Depois do comando colocar o link no "head" do html, do mesmo modo do "STATIC_URL"
+
+# STATIC_ROOT = BASE_DIR / 'static'      # Através desse comando você irá poder utilizar o comando no terminal "python manage.py collectstatic" que ele irá puxar todas os pastas statics do projeto e organizá-las em uma só pasta (no caso "static")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
